@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: adb-push-create
+Version: 0.11
+Summary: creates [nested] folders and pushes files with ADB
+Home-page: https://github.com/hansalemaos/adb_push_create
+Author: Johannes Fischer
+Author-email: aulasparticularesdealemaosp@gmail.com
+License: MIT
+Keywords: adb
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+
+
+# creates [nested] folders and pushes files with ADB
+
+## Tested against Windows 10 / Python 3.10 / Anaconda 
+
+### pip install adb-push-create
+
+```python
+from adb_push_create import push_file,make_folders
+adb_path = r"C:\ProgramData\chocolatey\bin\adb.exe"
+deviceserial = "xxxx"
+make_folders(adb_path, deviceserial,path2create='/sdcard/DCIM/0/12/4')
+copyok = push_file(
+    adb_path=adb_path,
+    deviceserial=deviceserial,
+    file=r"C:\xdf - Copy.m4v",
+    dest="/sdcard/DCIM/0/12/4/12/4/5", # path does not exist yet
+)
+print(copyok)
+True
+```
+
+Contribution
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the GitHub repository.
+
+License
+This project is licensed under the MIT License.

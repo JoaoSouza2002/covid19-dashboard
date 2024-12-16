@@ -1,0 +1,9 @@
+a_pandas_ex_less_memory_more_speed
+flatten_everything
+more_itertools
+numpy
+pandas
+pytesseract
+rapidfuzz
+regex
+requests

@@ -1,0 +1,6 @@
+Pillow
+numpy
+opencv_python
+requests
+tolerant_isinstance
+touchtouch

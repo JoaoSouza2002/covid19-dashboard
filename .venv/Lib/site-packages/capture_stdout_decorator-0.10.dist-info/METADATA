@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: capture-stdout-decorator
+Version: 0.10
+Summary: Captures stdout
+Home-page: https://github.com/hansalemaos/capture_stdout_decorator
+Author: Johannes Fischer
+Author-email: <aulasparticularesdealemaosp@gmail.com>
+License: MIT
+Keywords: Capture,stdout
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Editors :: Text Processing
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+
+
+# Captures stdout
+
+
+
+```python
+
+pip install capture-stdout-decorator
+
+```
+
+
+
+```python
+
+from capture_stdout_decorator import print_capture
+
+@print_capture
+
+def hahaha():
+
+    print("babab")
+
+    return 4
+
+@print_capture(print_output=False, return_func_val=False)
+
+def hahaha2():
+
+    print("babab")
+
+    return 4
+
+x = hahaha()
+
+print(f'{x=}')
+
+y = hahaha2()
+
+print(f'{y=}')
+
+
+
+# output:
+
+babab
+
+x=(4, 'babab\n')
+
+y='babab\n'
+
+		
+
+```

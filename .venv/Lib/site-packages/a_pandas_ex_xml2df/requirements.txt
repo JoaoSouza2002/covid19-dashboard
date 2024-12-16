@@ -1,0 +1,8 @@
+a_pandas_ex_horizontal_explode
+a_pandas_ex_plode_tool
+beautifulsoup4
+lxml
+nestednop
+pandas
+regex
+requests

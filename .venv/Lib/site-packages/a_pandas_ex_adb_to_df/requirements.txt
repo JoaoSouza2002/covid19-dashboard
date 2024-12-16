@@ -1,0 +1,3 @@
+pandas
+regex
+subprocess_print_and_capture
